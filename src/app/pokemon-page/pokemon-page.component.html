@@ -1,0 +1,45 @@
+<header>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong>Pokedex</strong>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Pokedex - Visualize todos os pokemons</h1>
+            <p class="lead text-muted">Você pode visualizar as caracteristicas de todos os pokemons, e também salvar
+                seus pokemons favoritos!</p>
+            <p>
+                <a href="#" class="btn btn-primary my-2">Todos os pokemons</a>
+                <a href="#" class="btn btn-secondary my-2">Meus pokemons favoritos</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- <section class="jumbotron" >
+        <div class="container" *ngIf="pokemonPage" >
+            <p *ngFor="let pokemon of pokemonPage.results">
+              curl {{(getPokemon(pokemon.name) | async).sprites.front_default}} > {{pokemon.name}}.png
+            </p>
+        </div>
+
+    </section> -->
+
+    <div class="album py-5 bg-light">
+        <div class="container" *ngIf="pokemonPage">
+
+            <div class="row">
+                <div class="col-md-4" *ngFor="let pokemon of pokemonPage.results">
+                    <app-pokemon-detail [pokemon-reference]="pokemon"></app-pokemon-detail>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
