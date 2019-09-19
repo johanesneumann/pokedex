@@ -20,9 +20,9 @@ export class PokemonDetailComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     console.log(this.pokemonReference);
   }
-  
+
   ngAfterViewInit(): void {
-    this.pokemonService.getPokemon(this.pokemonReference.name).subscribe((pokemon : Pokemon) => this._pokemon = pokemon);
+    this.pokemonService.getPokemon(this.pokemonReference.name).subscribe((pokemon: Pokemon) => this._pokemon = pokemon);
   }
 
   get pokemon(): Pokemon {
