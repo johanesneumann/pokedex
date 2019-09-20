@@ -25,10 +25,10 @@ Execute `ng generate component component-name` para criar um novo componente. Vo
 
 Execute `ng build` para empacotar o projeto. Os artefatos empacotados são armazenados no diretório `dist/`. Use a flag `--prod` para um empacotamento para ambiente de produção.
 
-## Running unit tests
+## Executando testes unitários
 
 Execute `ng test` para iniciar os teste unitários com [Karma](https://karma-runner.github.io).
 
-## Further help
+## Mais ajuda
 
 Para mais ajuda com comandos do Angular CLI use `ng help` ou confira o [Angular CLI LEIAME](https://github.com/angular/angular-cli/blob/master/README.md). 
