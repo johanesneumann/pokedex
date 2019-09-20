@@ -13,8 +13,8 @@ const routes: Routes = [
     path: 'favoritos',
     loadChildren: () => import('./favorite-pokemon/favorite-pokemon.module').then(mod => mod.FavoritePokemonModule)
   },
-  { path: '', redirectTo: '/pokemon', pathMatch: 'full' },
-  { path: '**', redirectTo: '/pokemon', pathMatch: 'full'}
+  { path: '', redirectTo: '/pokemons', pathMatch: 'full' },
+  { path: '**', redirectTo: '/pokemons', pathMatch: 'full'}
 ];
 
 @NgModule({

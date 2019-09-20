@@ -3,9 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FavoritePokemonModule } from './favorite-pokemon/favorite-pokemon.module';
-import { ApiPokemonModule } from './api-pokemon/api-pokemon.module';
 import { PokemonComponentsModule } from './common/pokemon-components/pokemon-components.module';
+import { PokemonService } from './services/pokemon.service';
 
 @NgModule({
   declarations: [
@@ -14,11 +13,9 @@ import { PokemonComponentsModule } from './common/pokemon-components/pokemon-com
   imports: [
     BrowserModule,
     PokemonComponentsModule,
-    ApiPokemonModule,
-    FavoritePokemonModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

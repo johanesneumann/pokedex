@@ -6,7 +6,7 @@ import { PokemonDetailComponent } from '../../common/pokemon-components/pokemon-
 import { PaginatorComponent } from '../../common/pokemon-components/paginator/paginator.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-describe('PokemonComponent', () => {
+describe('PokemonPageComponent', () => {
   let component: PokemonPageComponent;
   let fixture: ComponentFixture<PokemonPageComponent>;
 
