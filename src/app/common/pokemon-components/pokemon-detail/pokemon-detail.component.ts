@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
-import { Pokemon } from '../common/model/pokemon';
-import { PokemonReference } from '../common/model/pokemonReference';
-import { PokemonService } from '../services/pokemon.service';
+import { Pokemon } from '../../model/pokemon.model';
+import { PokemonReference } from '../../model/pokemonReference.model';
+import { PokemonService } from '../../../services/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-detail',
@@ -25,5 +25,17 @@ export class PokemonDetailComponent implements AfterViewInit {
 
   get pokemon(): Pokemon {
     return this._pokemon;
+  }
+
+  addOrRemoveFavorite() {
+    if (this.pokemonService.isPokemonFavorite(this.pokemonReference)) {
+      this.pokemonService.removeFavoritePokemon(this.pokemonReference);
+    } else {
+      this.pokemonService.addFavoritePokemon(this.pokemonReference);
+    }
+  }
+
+  isFavorite(): boolean {
+    return this.pokemonService.isPokemonFavorite(this.pokemonReference);
   }
 }

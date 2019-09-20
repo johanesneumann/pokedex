@@ -3,26 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PokemonPageComponent } from './pokemon-page/pokemon-page.component';
-import { HttpClientModule } from '@angular/common/http';
-import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
-import { PaginatorComponent } from './common/components/paginator/paginator.component';
-import { FooterComponent } from './common/components/footer/footer.component';
-import { HeaderComponent } from './common/components/header/header.component';
+import { FavoritePokemonModule } from './favorite-pokemon/favorite-pokemon.module';
+import { ApiPokemonModule } from './api-pokemon/api-pokemon.module';
+import { PokemonComponentsModule } from './common/pokemon-components/pokemon-components.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PokemonPageComponent,
-    PokemonDetailComponent,
-    PaginatorComponent,
-    FooterComponent,
-    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    PokemonComponentsModule,
+    ApiPokemonModule,
+    FavoritePokemonModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

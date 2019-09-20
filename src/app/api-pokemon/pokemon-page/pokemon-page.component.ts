@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PokemonService } from '../services/pokemon.service';
-import { PokemonPage } from '../common/model/pokemonPage';
+import { PokemonService } from '../../services/pokemon.service';
+import { PokemonPage } from '../../common/model/pokemonPage.model';
 
 @Component({
   selector: 'app-pokemon-page',

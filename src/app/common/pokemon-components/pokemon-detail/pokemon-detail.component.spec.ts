@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PokemonDetailComponent } from './pokemon-detail.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { PaginatorComponent } from '../common/components/paginator/paginator.component';
+import { PaginatorComponent } from '../paginator/paginator.component';
 
 describe('PokemonDetailComponent', () => {
   let component: PokemonDetailComponent;

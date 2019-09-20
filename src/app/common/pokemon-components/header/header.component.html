@@ -13,8 +13,8 @@
             <p class="lead text-muted">Você pode visualizar as caracteristicas de todos os pokemons, e também salvar
                 seus pokemons favoritos!</p>
             <p>
-                <a href="#" class="btn btn-primary my-2">Todos os pokemons</a>
-                <a href="#" class="btn btn-secondary my-2">Meus pokemons favoritos</a>
+                <a [routerLink]="['/']" routerLinkActive="active" class="btn btn-primary my-2">Todos os pokemons</a>
+                <a [routerLink]="['/favoritos']" routerLinkActive="active" class="btn btn-secondary my-2">Meus pokemons favoritos</a>
             </p>
         </div>
     </section>

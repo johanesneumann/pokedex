@@ -1,0 +1,15 @@
+<div class="card mb-4 shadow-sm h-100" *ngIf="pokemon">
+    <div class="card-header" id="headPokemon">
+
+        <h6 class="mb-0">
+            <h6 class="card-text float-md-left">{{pokemonReference.name | titlecase }}</h6>
+            <a>
+                <i [ngClass]="isFavorite()? 'fas fa-star' : 'far fa-star'" [title]="isFavorite() ? 'Remover dos favoritos': 'Adicionar aos favoritos'" (click)="addOrRemoveFavorite()"></i>
+            </a> 
+        </h6>
+    </div>
+    <img class="card-img-top" *ngIf="pokemon.sprites.front_default" [src]="pokemon.sprites.front_default"
+        alt="Card {{pokemonReference.name}}">
+    <img class="card-img-top" *ngIf="!pokemon.sprites.front_default" src="assets/pokemons/notfound.png"
+        alt="Card {{pokemonReference.name}}">
+</div>

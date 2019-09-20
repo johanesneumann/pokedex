@@ -1,4 +1,4 @@
-export class PokemonSprites {
+export interface PokemonSprites {
     // tslint:disable-next-line: variable-name
     front_default: string;
 }
