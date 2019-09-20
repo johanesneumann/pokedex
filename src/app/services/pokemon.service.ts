@@ -13,7 +13,7 @@ import { PokemonReference } from '../common/model/pokemonReference.model';
 export class PokemonService {
 
   pokemonURL: string = environment.pokeapi + 'pokemon';
-  favoritePokemonsKey = 'fav.pokemon.references';
+  favoritePokemonsKey = 'pokedex.fav.pokemon.references';
 
   constructor(private httpClient: HttpClient) {
   }
