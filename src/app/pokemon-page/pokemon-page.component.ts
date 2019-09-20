@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../services/pokemon.service';
-import { PokemonPage } from '../common/pokemonPage';
+import { PokemonPage } from '../common/model/pokemonPage';
 
 @Component({
   selector: 'app-pokemon-page',
@@ -10,7 +10,7 @@ import { PokemonPage } from '../common/pokemonPage';
 export class PokemonPageComponent implements OnInit {
 
   private page: PokemonPage;
-  private _pageSize = 20;
+  private pageSize = 20;
 
   constructor(private pokemonService: PokemonService) { }
 
@@ -22,12 +22,7 @@ export class PokemonPageComponent implements OnInit {
     return this.page;
   }
 
-  get pageSize(): number {
-    return this._pageSize;
-  }
-
   onPageChanged($event) {
-    console.log($event);
     this.loadPage($event.limit, $event.offset);
   }
 

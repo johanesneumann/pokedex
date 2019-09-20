@@ -2,3 +2,10 @@
     display:flex;
     justify-content:space-between;
 }
+
+i {
+    &:hover{
+        background-color: yellow;
+        border-radius: 10em;
+    }
+}

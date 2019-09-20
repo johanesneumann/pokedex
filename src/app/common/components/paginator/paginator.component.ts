@@ -55,7 +55,7 @@ export class PaginatorComponent implements OnInit {
   }
 
   private lastPageNumber(): number {
-    return Math.ceil(this.count / this.pageSize) - 1
+    return Math.ceil(this.count / this.pageSize) - 1;
   }
 
   private emit() {

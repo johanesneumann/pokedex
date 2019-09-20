@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
-import { Pokemon } from '../common/pokemon';
-import { PokemonReference } from '../common/pokemonReference';
+import { Pokemon } from '../common/model/pokemon';
+import { PokemonReference } from '../common/model/pokemonReference';
 import { PokemonService } from '../services/pokemon.service';
 
 @Component({
@@ -18,7 +18,9 @@ export class PokemonDetailComponent implements AfterViewInit {
   constructor(private pokemonService: PokemonService) { }
 
   ngAfterViewInit(): void {
-    this.pokemonService.getPokemon(this.pokemonReference.name).subscribe((pokemon: Pokemon) => this._pokemon = pokemon);
+    if (this.pokemonReference) {
+      this.pokemonService.getPokemon(this.pokemonReference.name).subscribe((pokemon: Pokemon) => this._pokemon = pokemon);
+    }
   }
 
   get pokemon(): Pokemon {
