@@ -8,7 +8,7 @@ import { PokemonService } from '../services/pokemon.service';
   templateUrl: './pokemon-detail.component.html',
   styleUrls: ['./pokemon-detail.component.scss']
 })
-export class PokemonDetailComponent implements OnInit, AfterViewInit {
+export class PokemonDetailComponent implements AfterViewInit {
   // tslint:disable-next-line: no-input-rename
   @Input('pokemon-reference') pokemonReference: PokemonReference;
 
@@ -16,10 +16,6 @@ export class PokemonDetailComponent implements OnInit, AfterViewInit {
   private _pokemon: Pokemon;
 
   constructor(private pokemonService: PokemonService) { }
-
-  ngOnInit() {
-    console.log(this.pokemonReference);
-  }
 
   ngAfterViewInit(): void {
     this.pokemonService.getPokemon(this.pokemonReference.name).subscribe((pokemon: Pokemon) => this._pokemon = pokemon);

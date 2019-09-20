@@ -10,15 +10,28 @@ import { PokemonPage } from '../common/pokemonPage';
 export class PokemonPageComponent implements OnInit {
 
   private page: PokemonPage;
+  private _pageSize = 20;
 
   constructor(private pokemonService: PokemonService) { }
 
   ngOnInit() {
-    this.pokemonService.getPokemonList(20, 0).subscribe(pokemonPage => this.page = pokemonPage);
+    this.loadPage(this.pageSize, 0);
   }
 
   get pokemonPage(): PokemonPage {
     return this.page;
   }
 
+  get pageSize(): number {
+    return this._pageSize;
+  }
+
+  onPageChanged($event) {
+    console.log($event);
+    this.loadPage($event.limit, $event.offset);
+  }
+
+  loadPage(limit: number, offset: number) {
+    this.pokemonService.getPokemonList(limit, offset).subscribe(pokemonPage => this.page = pokemonPage);
+  }
 }
