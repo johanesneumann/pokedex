@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PokemonComponentsModule } from './common/pokemon-components/pokemon-components.module';
+import { PokedexComponentsModule } from './common/pokedex-components/pokedex-components.module';
 import { PokemonService } from './services/pokemon.service';
 
 @NgModule({
@@ -12,7 +12,7 @@ import { PokemonService } from './services/pokemon.service';
   ],
   imports: [
     BrowserModule,
-    PokemonComponentsModule,
+    PokedexComponentsModule,
     AppRoutingModule
   ],
   providers: [PokemonService],

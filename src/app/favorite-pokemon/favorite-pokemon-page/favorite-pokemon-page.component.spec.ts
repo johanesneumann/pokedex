@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FavoritePokemonPageComponent } from './favorite-pokemon-page.component';
+import { PokedexComponentsModule } from 'src/app/common/pokedex-components/pokedex-components.module';
 
 describe('FavoritePokemonPageComponent', () => {
   let component: FavoritePokemonPageComponent;
@@ -8,9 +9,12 @@ describe('FavoritePokemonPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FavoritePokemonPageComponent ]
+      imports: [
+        PokedexComponentsModule
+      ],
+      declarations: [FavoritePokemonPageComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

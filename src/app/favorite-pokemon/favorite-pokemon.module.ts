@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FavoritePokemonPageComponent } from './favorite-pokemon-page/favorite-pokemon-page.component';
 import { FavoritePokemonRoutingModule } from './favorite-pokemon-routing.module';
-import { PokemonComponentsModule } from '../common/pokemon-components/pokemon-components.module';
+import { PokedexComponentsModule } from '../common/pokedex-components/pokedex-components.module';
 
 
 
@@ -12,7 +12,7 @@ import { PokemonComponentsModule } from '../common/pokemon-components/pokemon-co
   ],
   imports: [
     CommonModule,
-    PokemonComponentsModule,
+    PokedexComponentsModule,
     FavoritePokemonRoutingModule,
   ]
 })

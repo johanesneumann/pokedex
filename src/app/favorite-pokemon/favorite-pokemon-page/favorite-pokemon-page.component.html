@@ -1,1 +1,21 @@
-<p>favorite-pokemon-page works!</p>
+<main role="main">
+    <div class="album py-2 bg-light">
+        <section class="text-center">
+            <p class="lead text-muted">Estes são os seus Pokemons favoritos</p>
+        </section>
+        <div class="container" *ngIf="hasFavorites; else withoutFavorites">
+            <div class="row">
+                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 py-2" *ngFor="let pokemon of favoritePokemons ">
+                    <app-pokemon-detail [pokemon-reference]="pokemon" (favoriteChange)="favoriteChanged($event)">
+                    </app-pokemon-detail>
+                </div>
+            </div>
+        </div>
+        <ng-template #withoutFavorites>
+            <section class="text-center">
+                Você ainda não possui nenhum Pokemon favorito. Clique na estrela no canto superior de um pokemon para
+                que ele apareça aqui :)
+            </section>
+        </ng-template>
+    </div>
+</main>

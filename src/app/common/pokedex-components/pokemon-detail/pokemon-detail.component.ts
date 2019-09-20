@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit, Output, EventEmitter } from '@angular/core';
 import { Pokemon } from '../../model/pokemon.model';
 import { PokemonReference } from '../../model/pokemonReference.model';
 import { PokemonService } from '../../../services/pokemon.service';
@@ -12,6 +12,8 @@ export class PokemonDetailComponent implements AfterViewInit {
   // tslint:disable-next-line: no-input-rename
   @Input('pokemon-reference') pokemonReference: PokemonReference;
 
+  @Output()
+  favoriteChange: EventEmitter<boolean> = new EventEmitter();
   // tslint:disable-next-line: variable-name
   private _pokemon: Pokemon;
 
@@ -28,11 +30,13 @@ export class PokemonDetailComponent implements AfterViewInit {
   }
 
   addOrRemoveFavorite() {
-    if (this.pokemonService.isPokemonFavorite(this.pokemonReference)) {
+    const isFavorite = this.pokemonService.isPokemonFavorite(this.pokemonReference);
+    if (isFavorite) {
       this.pokemonService.removeFavoritePokemon(this.pokemonReference);
     } else {
       this.pokemonService.addFavoritePokemon(this.pokemonReference);
     }
+    this.favoriteChange.emit(!isFavorite);
   }
 
   isFavorite(): boolean {

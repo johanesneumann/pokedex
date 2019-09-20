@@ -1,7 +1,12 @@
 <main role="main">
     <div class="album py-2 bg-light">
+        <section class="text-center">
+            <p class="lead text-muted">Estes são os todos os Pokemons. Salve os seus favoritos clicando na estrela no
+                canto superior de cada
+                pokemon.</p>
+        </section>
         <div class="container" *ngIf="pokemonPage">
-            <app-paginator (pageChanged)="onPageChanged($event)" [pageSize]="pageSize" [count]="page.count">
+            <app-paginator (pageChanged)="onPageChanged($event)" [pageSize]="pageSize" [count]="pokemonPage.count">
             </app-paginator>
             <div class="row">
                 <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 py-2" *ngFor="let pokemon of pokemonPage.results">

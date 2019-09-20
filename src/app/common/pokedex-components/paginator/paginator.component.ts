@@ -9,13 +9,13 @@ export class PaginatorComponent implements OnInit {
 
   // tslint:disable-next-line: no-input-rename
   @Input('pageSize')
-  private pageSize: number;
+  pageSize: number;
 
   // tslint:disable-next-line: no-input-rename
   @Input('count')
-  private count: number;
+  count: number;
 
-  private page = 0;
+  page = 0;
 
   @Output()
   pageChanged = new EventEmitter();

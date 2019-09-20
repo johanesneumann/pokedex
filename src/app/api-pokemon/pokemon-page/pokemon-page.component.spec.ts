@@ -2,8 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PokemonPageComponent } from './pokemon-page.component';
 import { PokemonService } from '../../services/pokemon.service';
-import { PokemonDetailComponent } from '../../common/pokemon-components/pokemon-detail/pokemon-detail.component';
-import { PaginatorComponent } from '../../common/pokemon-components/paginator/paginator.component';
+import { PokemonDetailComponent } from '../../common/pokedex-components/pokemon-detail/pokemon-detail.component';
+import { PaginatorComponent } from '../../common/pokedex-components/paginator/paginator.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('PokemonPageComponent', () => {

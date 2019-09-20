@@ -52,10 +52,6 @@ export class PokemonService {
     localStorage.setItem(this.favoritePokemonsKey, JSON.stringify(favorites));
   }
 
-  clearFavoritePokemons() {
-    localStorage.removeItem(this.favoritePokemonsKey);
-  }
-
   isPokemonFavorite(pokemon: PokemonReference): boolean {
     const a = this.getFavoritePokemons().map(favorite => favorite.name).find(name => name === pokemon.name);
     return a !== undefined;

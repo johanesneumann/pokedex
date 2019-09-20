@@ -10,7 +10,7 @@ import { PokemonPage } from '../../common/model/pokemonPage.model';
 export class PokemonPageComponent implements OnInit {
 
   private page: PokemonPage;
-  private pageSize = 20;
+  pageSize = 20;
 
   constructor(private pokemonService: PokemonService) { }
 
