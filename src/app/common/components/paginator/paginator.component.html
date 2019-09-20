@@ -1,19 +1,19 @@
 <nav>
     <ul class="pagination justify-content-center">
         <li [ngClass]="hasPrevious() ? 'page-item' : 'page-item disabled'">
-            <a class="page-link" (click)="firstPage()">|<</a>
+            <a class="page-link fa fa-angle-left" (click)="firstPage()"></a>
         </li>
         <li [ngClass]="hasPrevious() ? 'page-item' : 'page-item disabled'">
-            <a class="page-link fa fa-camera-retro" (click)="previousPage()"></a>
+            <a class="page-link fa fa-angle-double-left" (click)="previousPage()"></a>
         </li>
         <li class="page-item disabled">
             <a class="page-link">{{page + 1}}</a>
         </li>
         <li [ngClass]="hasNext() ? 'page-item' : 'page-item disabled'">
-            <a class="page-link" (click)="nextPage()">></a>
+            <a class="page-link fa fa-angle-right" (click)="nextPage()"></a>
         </li>
         <li [ngClass]="hasNext() ? 'page-item' : 'page-item disabled'">
-            <a class="page-link" (click)="lastPage()">>|</a>
+            <a class="page-link  fa fa-angle-double-right" (click)="lastPage()"></a>
         </li>
     </ul>
 </nav>
