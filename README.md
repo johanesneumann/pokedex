@@ -4,7 +4,7 @@ Este projeto foi criado com [Angular CLI](https://github.com/angular/angular-cli
 
 
 - É possível visualizar Pokemons de forma paginada e também salvar seus favoritos. Os dados são obtidos utilizando a [PokeAPI](https://pokeapi.co/docs/v2.html).
-
+- O layout é responsivo.
 
 ## Pre requisitos
 
